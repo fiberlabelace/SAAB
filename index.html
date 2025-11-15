@@ -1077,6 +1077,9 @@ header.scrolled {
   overflow: hidden;
   z-index: 0;
 }
+.naval-video {
+    transform: scale(1.5);
+}
 
 .dust-zone .blue-dust {
   position: absolute; /* stays inside the four-section zone only */
@@ -1190,8 +1193,10 @@ header.scrolled {
                     <video class="category-video ${
                         category.name === 'Air' ? 'air-video' :
                         category.name === 'Cyber' ? 'cyber-video' :
+                        category.name === 'Naval' ? 'naval-video' :
                         ''
-                        }" autoplay muted loop playsinline>
+                    }" autoplay muted loop>
+
 
                     <source src="${videoMap[category.name]}" type="video/mp4">
                 </video>
